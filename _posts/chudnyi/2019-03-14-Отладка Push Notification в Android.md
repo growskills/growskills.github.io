@@ -19,7 +19,7 @@ author: chudnyi
 - токен устройства, уникальный ID устройства, отправляется устроству в рантайме при регистрации устройства в сервисе пушей
 ![push device token](http://cdn.chudnyi.com/assets/2019-03-14-mnsp-pm3ew.png)
 
-#### Отправка сообщения
+## Отправка сообщения
 
 ![headers](http://cdn.chudnyi.com/assets/2019-03-14-mnsp-1kiz3.png)
 ![body](http://cdn.chudnyi.com/assets/2019-03-14-mnsp-7j6xt.png)
