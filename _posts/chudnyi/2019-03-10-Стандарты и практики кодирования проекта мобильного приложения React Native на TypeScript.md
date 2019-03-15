@@ -4,6 +4,7 @@ categories:
   - chudnyi
 description: Стандарты и практики кодирования проекта мобильного приложения React Native на TypeScript
 type: Document
+author: chudnyi
 ---
 
 ### render

@@ -2,6 +2,7 @@
 # Site
 
 title: База знаний профессиональных разработчиков
+subtitle: Мы делимся опытом и знаниями друг с другом, чтобы вместе эффективнее решать сложные задачи
 url: "http://prodevguru.github.io"
 baseurl:
 google_analytics_key:
@@ -42,7 +43,8 @@ exclude:
 
 collections:
   sets:
-
+  authors:
+    output: true
 
 jekyll-archives:
   enabled: ['categories']
@@ -69,6 +71,12 @@ defaults:
       path: "index.html"
     values:
       body_class: "show_hero_search"
+  -
+    scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
 
 # -----------
 # CloudCannon

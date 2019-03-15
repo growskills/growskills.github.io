@@ -5,6 +5,7 @@ categories:
   - chudnyi
 description: Отладка Push Notification в Android
 type: Document
+author: chudnyi
 ---
 
 - Отправить тестовый пуш можно из [Postman \| Download Postman App](https://go.dmit.ch/2O3homd)
