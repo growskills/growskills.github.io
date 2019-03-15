@@ -14,6 +14,14 @@ layout: default
 	<section class="tutorial-content">
 		<h1>{{ page.title }}</h1>
 
+		<p>
+			{{ page.date | date_to_string }}
+			{% assign author = site.authors | where: 'short_name', page.author | first %}
+			{% if author %}
+			- <a href="{{ author.url }}">{{ author.name }}</a>
+			{% endif %}
+		</p>
+
 		{% if page.type == "Video" %}
 			{% include youtube.html video_id=page.video_id %}
 
@@ -27,14 +35,16 @@ layout: default
 				</div>
 			{% endif %}
 		{% endif %}
-		
+
 		<div class="tutorial-main">
 			{{ content }}
 		</div>
+        {% comment %}
 		<div class="tutorial-share">
 			<a class="modalOpen no-smooth" href="#subscribe">{% include social-icon.html icon="Email" %} Subscribe</a>
 			<a class="modalOpen no-smooth" href="#share">{% include social-icon.html icon="Share" %} Share</a>
 		</div>
+        {% endcomment %}
 	</section>
 </section>
 
@@ -53,8 +63,7 @@ layout: default
 {% assign related_posts_size = related_posts | size %}
 {% if related_posts_size > 0 %}
 	<div class="related">
-		<h3>Related tutorials</h3>
-
+		<h3>Связанные статьи</h3>
 		{% include listings.html listings=site.related_posts %}
 	</div>
 {% endif %}
@@ -77,6 +86,7 @@ layout: default
 	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 {% endif %}
 
+{% comment %}
 <div id="subscribe" class="modalDialog">
 	<div>
 		<a title="Close" class="close">&times;</a>
@@ -102,13 +112,14 @@ layout: default
 		</ul>
 	</div>
 </div>
+{% endcomment %}
 
 <script src="{{ site.baseurl }}/js/main.js"></script>
 
 <script>
-	var headings = document.querySelectorAll("h2[id]");
+	var headings = document.querySelectorAll(["h2[id]", "h3[id]", "h4[id]"]);
 
-	console.log(headings);
+	// console.log(headings);
 	for (var i = 0; i < headings.length; i++) {
 		var anchorLink = document.createElement("a");
 		anchorLink.innerText = "#";
