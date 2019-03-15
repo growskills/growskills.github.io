@@ -1,8 +1,8 @@
 # ----
 # Site
 
-title: База знаний профессиональных разработчиков
-subtitle: Мы делимся опытом и знаниями друг с другом, чтобы вместе эффективнее решать сложные задачи
+title: База знаний - Разработка мобильных приложений
+subtitle: iOS, Android, React Native, TypeScript, MobX, RxJS, ...
 url: "http://prodevguru.github.io"
 baseurl:
 google_analytics_key:
@@ -11,7 +11,7 @@ newsletter_action:
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
 logo: /siteicon.png
-description: База знаний профессиональных разработчиков.
+description: База знаний - Разработка мобильных приложений
 author:
   name:
   email:
